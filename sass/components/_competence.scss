@@ -1,0 +1,41 @@
+.competence {
+    @extend %list;
+    
+    display: flex;
+}
+
+.competence__item {
+    width: 270px;
+
+    &+& {
+        margin-left: 30px;
+    }
+}
+
+.competence__icon {
+    @include flex (flex, center, center);
+    
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: var(--bg-color-filter);
+}
+
+.competence__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+}
+
+.competence__content {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+}

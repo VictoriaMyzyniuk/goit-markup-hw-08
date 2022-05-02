@@ -1,0 +1,12 @@
+.filter {
+    @extend %list;
+    
+    @include flex (flex, none, center);
+    
+    margin-bottom: 50px;
+
+    &__item+&__item {
+        margin-left: 8px;
+    }
+}
+
