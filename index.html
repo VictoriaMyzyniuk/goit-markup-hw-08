@@ -16,6 +16,14 @@
             <nav class="nav">
                 <a href="./index.html" class="logo">Web<span class="logo__style">Studio</span></a>
 
+                <button type="button" class="mobile__button" data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="icon-cross" href="./image/icons.svg#icon-close"></use>
+                        <use class="icon-menu" href="./image/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+
+            <div class="mobile__menu" data-menu>  
                 <ul class="site-nav"> 
                     <li class="site-nav__item">
                         <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
@@ -29,27 +37,29 @@
                         <a href="./index.html" class="site-nav__link">Контакты</a>
                     </li>
                 </ul>
-            </nav>
 
-            <ul class="contacts">
-                <li class="contacts__item">
-                    <a href="mailto:info@devstudio.com" class="contacts__link">
-                        <svg class="contacts__icon" width="16" height="12">
-                            <use href="./image/icons.svg#icon-envelope-opt"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="contacts__item">
-                    <a href="tel:+380961111111" class="contacts__link">
-                    <svg class="contacts__icon" width="10" height="16">
-                        <use href="./image/icons.svg#icon-smartphone-opt"></use>
-                    </svg>
-                    +38 096 111 11 11
-                    </a> 
-                </li>
-            </ul>
-                
+                <ul class="contacts">
+                    <li class="contacts__item">
+                        <a href="mailto:info@devstudio.com" class="contacts__link">
+                            <svg class="contacts__icon" width="16" height="12">
+                                <use href="./image/icons.svg#icon-envelope-opt"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="contacts__item">
+                        <a href="tel:+380961111111" class="contacts__link">
+                            <svg class="contacts__icon" width="10" height="16">
+                                <use href="./image/icons.svg#icon-smartphone-opt"></use>
+                            </svg>
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            </nav>
+     
         </div>
     </header>
 
@@ -442,21 +452,21 @@
 
     <footer class="footer">
         <div class="container footer__wrap">
-            <div>
-            <a href="./index.html" class="logo logo__position">Web<span class="logo__style logo__color">Studio</span></a>
-            <address>
-                <ul class="address">
-                    <li class="address__item">г. Киев, пр-т Леси Украинки, 26</li> 
+            <div class="mobile">
+                <a href="./index.html" class="logo logo__position">Web<span class="logo__style logo__color">Studio</span></a>
+                <address>
+                    <ul class="address">
+                        <li class="address__item">г. Киев, пр-т Леси Украинки, 26</li> 
 
-                    <li class="address__item">
-                        <a href="mailto:info@devstudio.com" class="address__link">info@devstudio.com</a>
-                    </li>
+                        <li class="address__item">
+                            <a href="mailto:info@devstudio.com" class="address__link">info@devstudio.com</a>
+                        </li>
 
-                    <li>
-                        <a href="tel:+380961111111" class="address__link">+38 096 111 11 11</a>
-                    </li>
-                </ul>
-            </address>
+                        <li>
+                            <a href="tel:+380961111111" class="address__link">+38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </address>
             </div>
 
             <div class="footer-stand">
@@ -513,6 +523,7 @@
                 </form>
             </div>
     </footer>
+    <script src="./js/mobile_menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>

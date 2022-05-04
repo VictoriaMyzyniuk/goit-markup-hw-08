@@ -1,8 +1,17 @@
+// .style {
+//     border: 1px solid var(--border-header-color);
+// }
+
+// .head-wrap {
+//     @include flex (flex, center);
+// }
+
 .style {
     border: 1px solid var(--border-header-color);
+    
 }
 
 .head-wrap {
-    @include flex (flex, center);
+    position: relative;
 }
 

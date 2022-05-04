@@ -1,22 +1,110 @@
+// .footer {
+//     padding-top: 60px;
+//     padding-bottom: 60px;
+//     background-color: var(--bg-color-footer-header);
+// }
+
+// .footer__wrap {
+//     @include flex (flex, baseline);
+// }
+
+// .address {
+//     @extend %list;
+    
+//     line-height: 1.7;
+//     font-style: normal;
+// }
+
+// .address__item {
+//     margin-bottom: 9px;
+//     color: var(--primary-white-color);
+// }
+
+// .address__link {
+//     @extend %link;
+
+//     color: var(--font-color-link-footer);
+// }
+
+// .footer-stand {
+//     margin-left: 70px;
+// }
+
+// .footer-stand__header {
+//     margin-top: 0;
+//     margin-bottom: 20px;
+//     font-weight: 700;
+//     line-height: 1.14;
+//     letter-spacing: 0.03em;
+//     text-transform: uppercase;
+//     color: var(--primary-white-color);
+// }
+// /* sudsection form */
+
+// .form {
+//     margin-left: auto;
+
+//     &__icon {
+//         margin-left: 10px;
+//     }
+// }
+
+// .wrapper {
+//     display: flex;
+// }
+
+// .form__input {
+//     width: 358px;
+
+//     padding-top: 15px;
+//     padding-left: 16px;
+//     padding-bottom: 15px;
+
+//     border: 1px solid rgba(255, 255, 255, 0.3);
+//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+//     border-radius: 4px;
+//     background-color: var(--bg-color-footer-header);
+//     color: var(--font-color-link-footer);
+// }
+
+// .form__message {
+//     display: block;
+//     margin-bottom: 20px;
+//     margin-top: 0;
+
+//     font-weight: 700;
+//     line-height: 1.14;
+//     letter-spacing: 0.03em;
+//     text-transform: uppercase;
+//     color: var(--primary-white-color);
+// }
+
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--bg-color-footer-header);
+
+    // @include flex (flex, center, center);
 }
 
 .footer__wrap {
-    @include flex (flex, baseline);
+
+}
+
+.mobile {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .address {
     @extend %list;
-    
+
     line-height: 1.7;
     font-style: normal;
 }
 
 .address__item {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     color: var(--primary-white-color);
 }
 
@@ -27,7 +115,8 @@
 }
 
 .footer-stand {
-    margin-left: 70px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .footer-stand__header {
@@ -39,10 +128,12 @@
     text-transform: uppercase;
     color: var(--primary-white-color);
 }
+
 /* sudsection form */
 
 .form {
-    margin-left: auto;
+    text-align: center;
+    // margin-left: auto;
 
     &__icon {
         margin-left: 10px;
@@ -50,7 +141,7 @@
 }
 
 .wrapper {
-    display: flex;
+    
 }
 
 .form__input {
@@ -59,6 +150,7 @@
     padding-top: 15px;
     padding-left: 16px;
     padding-bottom: 15px;
+    margin-bottom: 20px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
