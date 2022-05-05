@@ -83,17 +83,43 @@
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--bg-color-footer-header);
-
-    // @include flex (flex, center, center);
 }
 
 .footer__wrap {
+    display: flex;
+    flex-direction: column;
 
+    @media screen and (min-width: $desctop) {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    } 
 }
 
 .mobile {
     text-align: center;
     margin-bottom: 60px;
+
+    
+    @media screen and (min-width: $desctop) {
+        text-align: inherit;
+        margin-bottom: 0;
+    }
+}
+
+.tablet {
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }  
+    @media screen and (min-width: $desctop) {
+        display: flex;
+        justify-content: start;
+        margin-bottom: 0;
+    }
+
 }
 
 .address {
@@ -117,6 +143,11 @@
 .footer-stand {
     text-align: center;
     margin-bottom: 60px;
+
+    @media screen and (min-width: $desctop) {
+        margin-left: 70px;
+        text-align: inherit;
+    }
 }
 
 .footer-stand__header {
@@ -126,26 +157,32 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--primary-white-color);
+    color: var(--primary-white-color);  
 }
 
 /* sudsection form */
 
 .form {
     text-align: center;
-    // margin-left: auto;
-
+    
     &__icon {
         margin-left: 10px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        margin-left: auto;
+        text-align: inherit; 
     }
 }
 
 .wrapper {
-    
+    @media screen and (min-width: $desctop) {
+        display: flex;
+    }
 }
 
 .form__input {
-    width: 358px;
+    width: 100%;
 
     padding-top: 15px;
     padding-left: 16px;
@@ -157,6 +194,15 @@
     border-radius: 4px;
     background-color: var(--bg-color-footer-header);
     color: var(--font-color-link-footer);
+
+    @media screen and (min-width: $tablet) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        width: 358px;
+        margin-bottom: 0;
+    }
 }
 
 .form__message {

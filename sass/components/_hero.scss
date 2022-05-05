@@ -50,7 +50,7 @@
 }
 
 .hero__title {
-    width: 480px;
+    width: 696px;
     margin: 0 auto 30px;
 
     color: var(--primary-white-color);
@@ -60,4 +60,8 @@
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (min-width: $desctop) {
+        width: 696px;
+    }
 }

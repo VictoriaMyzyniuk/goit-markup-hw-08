@@ -32,7 +32,7 @@
 // }
 
 // .competence__title {
-//     text-align: center;
+
 //     margin-top: 0;
 //     margin-bottom: 10px;
 
@@ -54,37 +54,53 @@
 .competence {
     @extend %list;
 
-    // display: flex;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;  
+    } 
+    @media screen and (min-width: $desctop) {
+        margin-bottom: 0;
+    }
 }
 
-.competence__item {
+.competence__item {   
+        width: 100%;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
 
-    @media screen and (min-width: $mobile) {
-        text-align: center;
+    @media screen and (min-width: $tablet) {
+        width: calc(50% - 15px);
+
+        &:nth-last-child(-n + 2) {
+            margin-bottom: 0;
+        }  
     }
 
-    width: 100%;
-
-    &+& {
-        margin-left: 30px;
+    @media screen and (min-width: $desctop) {
+        width: 270px;
+        margin-bottom: 0;
+        
     }
 }
 
 .competence__icon {
-    @media screen and (min-width: $mobile) {
-        width: 100%;
-    }
 
     @include flex (flex, center, center);
 
-    width: 270px;
+    width: 100%;
     height: 120px;
     margin-bottom: 30px;
-
+    
     background-color: var(--bg-color-filter);
 }
 
 .competence__title {
+    width: 100%;
     text-align: center;
     margin-top: 0;
     margin-bottom: 10px;
@@ -93,13 +109,22 @@
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--title-text-color);
+
+    @media screen and (min-width: $mobile) {
+        width: 100%;
+        text-align: center;
+    }
+    
+    @media screen and (min-width: $tablet) {
+        text-align: inherit;   
+    }
 }
 
 .competence__content {
-
     margin-top: 0;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
 
     line-height: 1.7;
     letter-spacing: 0.03em;
+
 }

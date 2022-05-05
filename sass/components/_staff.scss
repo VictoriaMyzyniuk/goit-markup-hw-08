@@ -46,6 +46,41 @@
 .staff {
     @extend %list;
     width: 100%; 
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.staff__item {
+    width: 100%;
+
+    margin-bottom: 30px;
+
+    background-color: var(--primary-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: calc(50% - 15px);
+
+        &:nth-last-child(-n + 2) {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (min-width: $desctop) {
+        width: 270px;
+        margin-bottom: 0;
+    }
 }
 
 .staff__name {
@@ -74,19 +109,3 @@
     letter-spacing: 0.03em;
 }
 
-.staff__item {
-    width: 100%;
-
-    margin-bottom: 30px;
-
-    background-color: var(--primary-white-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-}

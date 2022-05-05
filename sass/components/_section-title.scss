@@ -41,6 +41,15 @@
     &:nth-child(4n) {
         background-color: var(--bg-color-filter);
     }
+
+    @media screen and (min-width: $desctop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+
+        &:nth-child(3n) {
+            display: block;
+        }
+    }
 }
 
 .section__title {

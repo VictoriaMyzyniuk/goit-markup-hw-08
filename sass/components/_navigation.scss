@@ -67,24 +67,51 @@
 }
 
 .mobile__menu {
+    z-index: 10;
 
+    display: none;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+   
+    
+    background-color: var(--primary-white-color);
+    
     &.is-open {
         display: block;
     }
-
-    @media screen and (max-width: 767px) {
+    
+    @media screen and (min-width: $mobile) {
         display: none;
-
-        background-color: var(--primary-white-color);
+        
         position: absolute;
         top: 100%;
-        left: 0;
+        // left: 0;
         width: 100%;
+       
+        background-color: var(--primary-white-color);
+
+        &.is-open {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        position: static;
+
+        @include flex (flex, center, space-between);
     }
 }
 
 .site-nav {
     @extend %list;
+
+    @media screen and (min-width: $tablet) {
+
+        // @include flex (flex, center);
+    }
 }
 
 .site-nav__item {
@@ -94,13 +121,17 @@
 
     position: relative;
 
-    &:hover,
-    &:focus {
+    margin-bottom: 32px;
+
+    &:hover, &:focus {
         color: var(--accent-color);
     }
 
-    &+& {
-        margin-left: 50px;
+    @media screen and (min-width: $desctop) {
+
+        &+& {
+            margin-left: 50px;
+        }
     }
 }
 
@@ -108,29 +139,39 @@
     @extend %link;
 
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
     color: var(--title-text-color);
     font-weight: 500;
-    line-height: 1.14;
+    font-size: 40px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
 
     &--current {
         color: var(--accent-color);
     }
 
-    &--current::after {
-        content: '';
+    @media screen and (min-width: $tablet) {
+        bottom: 0;
+       
+        &--current::after {
+            content: '';
 
-        position: absolute;
-        width: 100%;
-        bottom: -1.5px;
+            position: absolute;
+            width: 100%;
+            bottom: -1.5px;
 
-        display: flex;
+            display: flex;
 
-        height: 4px;
-        background-color: var(--accent-color);
-        border-radius: 2px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+    }
+
+    @media screen and (min-width: $desctop) {
+
+        line-height: 1.17;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
