@@ -38,7 +38,7 @@
 .contacts {
     @extend %list;
 
-    margin-left: auto;
+    // margin-left: auto;
 
     display: flex;
     flex-direction: column-reverse;
@@ -47,9 +47,13 @@
 
     @media screen and (min-width: $tablet) {
         display: flex; 
+        flex-direction: column;
     }
 
     @media screen and (min-width: $desctop) {
+        flex-direction: inherit;
+        
+
         &__item+&__item {
             margin-left: 30px;
         }
@@ -61,17 +65,20 @@
 
     @include flex (flex, center);
 
-    margin-bottom: 32px;
-    
     color: var(--primary-text-color);
     font-weight: 500;
-    font-size: 34px;
-    line-height: 1.17;
+    
     letter-spacing: 0.02em;
+
+    @media screen and (max-width: 767px) {
+        font-size: 34px;
+        line-height: 1.17;
+    }
     
     @media screen and (min-width: $tablet) {
         font-size: 12px;
     }
+    
     @media screen and (min-width: $desctop) {
         line-height: 1.14;
         padding-top: 32px;
@@ -80,14 +87,27 @@
 }
 
 .contacts__link--mail {
-    font-size: 24px;
-    line-height: 1.16;
+
+    @media screen and (max-width: 767px) {
+        font-size: 24px;
+        line-height: 1.16;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        margin-bottom: 0;
+    }
+    
 }
 
 .contacts__icon {
     display: none;
 
     @media screen and (min-width: $tablet) {
+        display: block;
         margin-right: 10px;
         cursor: pointer;
         fill: currentColor;

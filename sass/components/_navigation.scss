@@ -59,7 +59,6 @@
 
 .nav {
     width: 100%;
-    height: 60px;
 
     display: flex;
     align-items: center;
@@ -103,14 +102,21 @@
 
         @include flex (flex, center, space-between);
     }
+        @media screen and (min-width: $desctop) {
+            
+            
+            @include flex (flex, center);
+        }
+
 }
 
 .site-nav {
     @extend %list;
 
     @media screen and (min-width: $tablet) {
-
-        // @include flex (flex, center);
+        margin-left: 88px;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -121,14 +127,13 @@
 
     position: relative;
 
-    margin-bottom: 32px;
+    // margin-bottom: 32px;
 
     &:hover, &:focus {
         color: var(--accent-color);
     }
 
-    @media screen and (min-width: $desctop) {
-
+    @media screen and (min-width: $tablet) {
         &+& {
             margin-left: 50px;
         }
@@ -142,36 +147,44 @@
 
     color: var(--title-text-color);
     font-weight: 500;
-    font-size: 40px;
-    line-height: 1.17;
     letter-spacing: 0.02em;
 
     &--current {
-        color: var(--accent-color);
+        color: var(--accent-color);  
+    }
+
+    @media screen and (max-width: 767px) {
+        font-size: 40px;
+        line-height: 1.17;
     }
 
     @media screen and (min-width: $tablet) {
-        bottom: 0;
-       
-        &--current::after {
-            content: '';
-
-            position: absolute;
-            width: 100%;
-            bottom: -1.5px;
-
-            display: flex;
-
-            height: 4px;
-            background-color: var(--accent-color);
-            border-radius: 2px;
-        }
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 
     @media screen and (min-width: $desctop) {
+        line-height: 1.14;
+        
+    }
+}
 
-        line-height: 1.17;
-        padding-top: 32px;
-        padding-bottom: 32px;
+.site-nav__link--current::after {
+    content: '';
+
+    position: absolute;
+    width: 100%;
+    bottom: -1.5px;
+
+    display: flex;
+
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+        display: block;
     }
 }
