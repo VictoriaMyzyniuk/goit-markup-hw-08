@@ -186,7 +186,7 @@
     background-color: var(--bg-backdrop);
 
     overflow-y: scroll;
-    z-index: 1;
+    z-index: 11;
     opacity: 1;
     visibility: visible;
 
@@ -198,19 +198,18 @@
         pointer-events: none;
         visibility: hidden;
     }
+
+    @media screen and (min-width: $tablet) {
+        padding: 0;
+    }
 }
 
 /* subsection modal  */
 
 .modal {
     position: relative;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%) scale(1);
-
-    width: 450px;
-    height: 609px;
+    
+    width: 100%;
     padding: 40px;
 
     background-color: var(--primary-white-color);
@@ -225,10 +224,24 @@
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(2);
     }
+
+    @media screen and (min-width: $tablet) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1); 
+        
+        width: 450px;
+    }
+
+    @media screen and (min-width: $desctop) {
+
+        width: 528px;
+    }
 }
 
 .reg-form {
-    @include flex (flex, center);
+    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
@@ -261,8 +274,9 @@
 
 .reg-form__input {
     display: inline-block;
-    width: 370px;
+    width: 100%;
     height: 40px;
+    
     padding: 0;
     padding-left: 42px;
 
@@ -314,7 +328,7 @@
     @include flex (flex, center);
 
     font-size: 12px;
-    line-height: 1.7;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
     margin-bottom: 30px;
@@ -333,7 +347,7 @@
 
 .reg-form__custom-checkbox {
     display: inline-block;
-    margin-right: 8.4px;
+    margin-right: 8px;
     width: 16px;
     height: 15px;
     border: 2px solid var(--secondary-logo-color);

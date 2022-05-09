@@ -69,49 +69,41 @@
     z-index: 10;
 
     display: none;
-    
-    position: absolute;
-    top: 100%;
-    left: 0;
     width: 100%;
-   
     
     background-color: var(--primary-white-color);
     
     &.is-open {
-        display: block;
-    }
-    
-    @media screen and (min-width: $mobile) {
-        display: none;
-        
-        position: absolute;
-        top: 100%;
-        // left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
         width: 100%;
-       
-        background-color: var(--primary-white-color);
-
-        &.is-open {
-            display: block;
-        }
+        padding: 48px 40px;
+        overflow: scroll;
     }
 
     @media screen and (min-width: $tablet) {
         position: static;
 
-        @include flex (flex, center, space-between);
+        @include flex (flex, center);
     }
-        @media screen and (min-width: $desctop) {
-            
-            
-            @include flex (flex, center);
-        }
 
+    @media screen and (min-width: $desctop) {
+               
+        @include flex (flex, center);
+    }
 }
 
 .site-nav {
     @extend %list;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 302px;
+    }
 
     @media screen and (min-width: $tablet) {
         margin-left: 88px;
@@ -127,7 +119,11 @@
 
     position: relative;
 
-    // margin-bottom: 32px;
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     &:hover, &:focus {
         color: var(--accent-color);
@@ -137,6 +133,8 @@
         &+& {
             margin-left: 50px;
         }
+
+        margin-bottom: 0;
     }
 }
 
@@ -174,7 +172,7 @@
 
     position: absolute;
     width: 100%;
-    bottom: -1.5px;
+    bottom: -1px;
 
     display: flex;
 

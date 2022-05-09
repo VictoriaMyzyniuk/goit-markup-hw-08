@@ -1,0 +1,35 @@
+.header-socials {
+    @extend %list;
+
+    @include flex (flex, center);
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.header-socials__item {
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+    padding-left: 10px;
+
+    &+& {
+        margin-left: 10px;
+    }
+
+    &:first-child {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: transparent;
+    }
+}
+
+.header-socials__link {
+    @extend %link;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+}

@@ -120,6 +120,10 @@
 // }
 
 .mobile__button {
+    position: absolute;
+    z-index: 100;
+    right: 30px;
+
     align-items: flex-end;
     width: 40px;
     height: 40px;
@@ -141,6 +145,7 @@
 }
 
 .mobile__button.is-open .icon-cross {
+    
     display: block;
 }
 
@@ -149,7 +154,7 @@
 }
 
 .icon-cross {
-
+    
     &:hover,
     &:focus {
         color: var(--accent-color);

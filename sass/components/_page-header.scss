@@ -7,15 +7,12 @@
 // }
 
 .style {
-    border-bottom: 1px solid var(--border-header-color);   
+    border-bottom: 1px solid var(--border-header-color);  
+       
 }
 
 .head-wrap {
-        position: relative;
-        
-    @media screen and (min-width: $mobile) {
-        position: relative;
-    }
+    position: relative;
    
 }
 
