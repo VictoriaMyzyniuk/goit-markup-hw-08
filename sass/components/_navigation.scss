@@ -1,68 +1,7 @@
-// .nav {
-//     @include flex (flex, center);
-// }
-
-// .site-nav {
-//     @extend %list;
-
-//     display: flex;
-//     margin-left: 93px;
-// }
-
-// .site-nav__item {
-//     @include flex (flex, center);
-
-//     color: var(--primary-text-color);
-
-//     position: relative;
-
-//     &:hover,
-//     &:focus {
-//         color: var(--accent-color);
-//     }
-
-//     &+& {
-//         margin-left: 50px;
-//     }
-// }
-
-// .site-nav__link {
-//     @extend %link;
-
-//     display: block;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-
-//     color: var(--title-text-color);
-//     font-weight: 500;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
-
-//     &--current {
-//         color: var(--accent-color);
-//     }
-
-//     &--current::after {
-//         content: '';
-
-//         position: absolute;
-//         width: 100%;
-//         bottom: -1.5px;
-
-//         display: flex;
-
-//         height: 4px;
-//         background-color: var(--accent-color);
-//         border-radius: 2px;
-//     }
-// }
-
 .nav {
     width: 100%;
+    @include flex (flex, center, space-between);
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .mobile__menu {
@@ -74,9 +13,9 @@
     background-color: var(--primary-white-color);
     
     &.is-open {
-        display: flex;
+        @include flex (flex, none, space-between);
+        
         flex-direction: column;
-        justify-content: space-between;
         position: fixed;
         top: 0;
         left: 0;

@@ -139,13 +139,16 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -637,25 +640,52 @@ img {
 }
 
 .hero {
-  max-width: 100%;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: var(--bg-color-footer-header);
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/main-img-sq.jpg");
-  background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/main-img-sq.jpg");
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/image/mobile/bg-img-mobile-1x.jpg");
+  background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/image/mobile/bg-img-mobile-1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("/image/mobile/bg-img-mobile-2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    background-image: url("/image/tablet/bg-img-tablet-1x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("/image/tablet/bg-img-tablet-2x.jpg");
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    height: 600px;
     max-width: 1600px;
+    height: 600px;
+    background-image: url("/image/desktop/bg-img-desk-1x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("/image/desktop/bg-img-desk-2x.jpg");
   }
 }
 
@@ -669,6 +699,12 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__title {
+    width: 360px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -846,6 +882,15 @@ img {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .reg-form__agreement {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
 .reg-form__checkbox {
   /* appearance: none; */
   position: absolute;
@@ -894,11 +939,14 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-align: none;
+        -ms-flex-align: none;
+            align-items: none;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -1031,11 +1079,14 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-align: none;
+        -ms-flex-align: none;
+            align-items: none;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -1147,11 +1198,14 @@ specifity */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .clients__icon {
@@ -1229,13 +1283,13 @@ specifity */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
   }
 }
 
@@ -1256,12 +1310,12 @@ specifity */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
@@ -1270,6 +1324,9 @@ specifity */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: none;
+        -ms-flex-align: none;
+            align-items: none;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
@@ -1411,9 +1468,6 @@ specifity */
 }
 
 @media screen and (min-width: 768px) {
-  .filter__item:nth-child(4) {
-    margin-left: 8px;
-  }
   .filter__item:nth-child(-n+5) {
     margin-bottom: 0;
   }
@@ -1424,11 +1478,14 @@ specifity */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-align: none;
+        -ms-flex-align: none;
+            align-items: none;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
