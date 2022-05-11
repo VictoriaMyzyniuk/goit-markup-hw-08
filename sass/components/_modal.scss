@@ -9,7 +9,7 @@
     background-color: var(--bg-backdrop);
 
     overflow-y: scroll;
-    z-index: 11;
+    z-index: 21;
     opacity: 1;
     visibility: visible;
 
@@ -178,6 +178,7 @@
 .reg-form__custom-checkbox {
     display: inline-block;
     margin-right: 8px;
+    min-width: 16px;
     width: 16px;
     height: 15px;
     border: 2px solid var(--secondary-logo-color);
