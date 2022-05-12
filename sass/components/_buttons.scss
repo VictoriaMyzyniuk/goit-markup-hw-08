@@ -1,7 +1,8 @@
 .mobile__button {
     position: absolute;
     z-index: 20;
-    right: 30px;
+    right: 18px;
+    top: 10px;
 
     align-items: flex-end;
     width: 40px;
@@ -19,12 +20,28 @@
     }
 }
 
+.mobile__button.is-open {
+    position: fixed;
+    z-index: 20;
+    right: 18px;
+    top: 10px;
+}
+
+.mobile__button {
+    color: var(--secondary-logo-color);
+        transition: color var(--duration) var(--timing-function);
+    
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+}
+
 .mobile__button .icon-cross {
     display: none;
 }
 
 .mobile__button.is-open .icon-cross {
-    
     display: block;
 }
 
@@ -32,19 +49,26 @@
     display: none;
 }
 
-.icon-cross {    
+.icon-cross { 
+   
+    color: var(--secondary-logo-color);
+    transition: color var(--duration) var(--timing-function);
+
     &:hover,
     &:focus {
         color: var(--accent-color);
     }
 }
 
-.icon-menu {
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
-}
+// .icon-menu {
+//     color: var(--secondary-logo-color);
+//     transition: color var(--duration) var(--timing-function);
+
+//     &:hover,
+//     &:focus {
+//         color: var(--accent-color);
+//     }
+// }
 
 .hero__button {
     padding: 10px 32px;

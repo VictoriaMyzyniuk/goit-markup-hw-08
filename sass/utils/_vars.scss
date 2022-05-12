@@ -29,13 +29,14 @@ body {
     background-color: var(--primary-white-color);
     color: var(--primary-text-color);
     font-family: Roboto, sans-serif;
-    font-size: 14px;
-    
+    font-size: 14px;  
 }
 
-body.modal-open {
+body.modal-open, body.menu-open {
     overflow: hidden;
 }
+
+
 
 img {
     display: block;

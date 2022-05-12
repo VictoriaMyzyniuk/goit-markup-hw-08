@@ -1,38 +1,53 @@
 .nav {
     width: 100%;
-    @include flex (flex, center, space-between);
-
+    // @include flex (flex, center);
+    display: flex;
+    
 }
 
 .mobile__menu {
-    z-index: 10;
-
-    display: none;
     width: 100%;
-    
-    background-color: var(--primary-white-color);
-    
-    &.is-open {
-        @include flex (flex, none, space-between);
+    @media screen and (max-width: 767.9px) {
         
+    z-index: 10;
+    background-color: var(--primary-white-color);
+    display: flex;
+   
+        opacity: 0;
+        transform: translateX(100%);
+    
         flex-direction: column;
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
         height: 100%;
         width: 100%;
         padding: 48px 40px;
-        overflow: scroll;
-    }
+        overflow: hidden;
+        
 
-    @media screen and (min-width: $tablet) {
-        position: static;
+    transition: transform var(--duration) var(--timing-function),
+        opacity var(--duration) var(--timing-function);
 
-        @include flex (flex, center);
+    &.is-open {
+        @media screen and (max-width: 767.9px) {
+        max-width: 480px;
+        opacity: 1;
+        transform: translateX(0);   
+        }
     }
+}
+
+   @media screen and (min-width: $tablet) {
+            
+            margin-left: 88px;
+
+            @include flex (flex, center);
+        }
 
     @media screen and (min-width: $desctop) {
-               
+        margin-left: 93px;
+
         @include flex (flex, center);
     }
 }
@@ -40,14 +55,13 @@
 .site-nav {
     @extend %list;
 
-    @media screen and (max-width: 767px) {
-        margin-bottom: 302px;
+    @media screen and (max-width: 767.9px) {
+        margin-bottom: auto;
     }
 
     @media screen and (min-width: $tablet) {
-        margin-left: 88px;
+        
         display: flex;
-        justify-content: space-between;
     }
 }
 
@@ -90,7 +104,7 @@
         color: var(--accent-color);  
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.9px) {
         font-size: 40px;
         line-height: 1.17;
     }

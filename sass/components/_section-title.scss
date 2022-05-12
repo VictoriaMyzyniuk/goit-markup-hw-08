@@ -2,11 +2,12 @@
     padding-top: 60px;
     padding-bottom: 60px;
     
-    &:nth-child(2) {
-        padding-bottom: 0;
-    }
+    // &:nth-child(2) {
+    //     padding-bottom: 0;
+    // }
 
     &:nth-child(3n) {
+        padding-top: 0;
         display: none;
     }
 
@@ -33,4 +34,9 @@
     font-size: 36px;
     line-height: 1.17;
     text-align: center; 
+
+    @media screen and (min-width: $desctop) {
+        margin-bottom: 50px;
+
+    }
 }

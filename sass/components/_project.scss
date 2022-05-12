@@ -1,5 +1,8 @@
 .project {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
     color: var(--primary-text-color);
     text-decoration: none;
 
@@ -19,6 +22,7 @@
 }
 
 .project__overlay {
+    overflow-y: scroll;
     position: absolute;
     top: 0;
     left: 0;
@@ -50,7 +54,8 @@
 .project__info {
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
-    border-top: 0;
+    border-top: 0; 
+    flex-grow: 1; 
 }
     
 .project__title {

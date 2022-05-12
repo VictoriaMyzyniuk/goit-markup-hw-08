@@ -17,7 +17,11 @@
 .mobile {
     text-align: center;
     margin-bottom: 60px;
- 
+    
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 0;
+    }
+
     @media screen and (min-width: $desctop) {
         text-align: inherit;
         margin-bottom: 0;
@@ -25,10 +29,11 @@
 }
 
 .tablet {
+    margin-bottom: 60px;
 
     @media screen and (min-width: $tablet) {
         @include flex (flex, baseline, space-evenly);
-    
+        
     }  
     @media screen and (min-width: $desctop) {
         @include flex (flex, none, start);
@@ -57,7 +62,7 @@
 
 .footer-stand {
     text-align: center;
-    margin-bottom: 60px;
+    
 
     @media screen and (min-width: $desctop) {
         margin-left: 70px;
