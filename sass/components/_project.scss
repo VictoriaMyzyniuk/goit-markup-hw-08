@@ -49,6 +49,12 @@
         opacity: 1;
         transform: translateY(0);
     }
+
+    @media screen and (min-width: $desctop) {
+
+    overflow-y: scroll;
+    }
+
 }
 
 .project__info {

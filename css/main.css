@@ -466,7 +466,7 @@ img {
   position: absolute;
   z-index: 20;
   right: 18px;
-  top: 10px;
+  top: 20px;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -824,7 +824,7 @@ img {
 
 @media screen and (min-width: 480px) {
   .modal {
-    width: 480px;
+    width: 450px;
   }
 }
 
@@ -1624,6 +1624,12 @@ specifity */
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media screen and (min-width: 1200px) {
+  .project__overlay {
+    overflow-y: scroll;
+  }
 }
 
 .project__info {
