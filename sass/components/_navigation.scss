@@ -1,141 +1,136 @@
 .nav {
-    width: 100%;
-    // @include flex (flex, center);
-    display: flex;
-    
+  width: 100%;
+  // @include flex (flex, center);
+  display: flex;
 }
 
 .mobile__menu {
-    width: 100%;
-    @media screen and (max-width: 767.9px) {
-        
+  width: 100%;
+  @media screen and (max-width: 767.9px) {
     z-index: 10;
     background-color: var(--primary-white-color);
     display: flex;
-   
-        opacity: 0;
-        transform: translateX(100%);
-    
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        padding: 48px 40px;
-        overflow: hidden;
-        
+
+    opacity: 0;
+    transform: translateX(100%);
+
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    padding: 48px 40px;
+    overflow: hidden;
 
     transition: transform var(--duration) var(--timing-function),
-        opacity var(--duration) var(--timing-function);
+      opacity var(--duration) var(--timing-function);
 
     &.is-open {
-        @media screen and (max-width: 767.9px) {
+      @media screen and (max-width: 767.9px) {
         max-width: 767.9px;
         opacity: 1;
-        transform: translateX(0);   
-        }
+        transform: translateX(0);
+      }
     }
-}
+  }
 
-   @media screen and (min-width: $tablet) {
-            
-            margin-left: 88px;
+  @media screen and (min-width: $tablet) {
+    margin-left: 88px;
 
-            @include flex (flex, center);
-        }
+    @include flex(flex, center);
+  }
 
-    @media screen and (min-width: $desctop) {
-        margin-left: 93px;
+  @media screen and (min-width: $desctop) {
+    margin-left: 93px;
 
-        @include flex (flex, center);
-    }
+    @include flex(flex, center);
+  }
 }
 
 .site-nav {
-    @extend %list;
+  @extend %list;
 
-    @media screen and (max-width: 767.9px) {
-        margin-bottom: auto;
-    }
+  @media screen and (max-width: 767.9px) {
+    margin-bottom: auto;
+  }
 
-    @media screen and (min-width: $tablet) {
-        
-        display: flex;
-    }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .site-nav__item {
-    @include flex (flex, center);
+  @include flex(flex, center);
 
-    color: var(--primary-text-color);
+  color: var(--primary-text-color);
 
-    position: relative;
+  position: relative;
 
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 
-    &:last-child {
-        margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  @media screen and (min-width: $tablet) {
+    & + & {
+      margin-left: 50px;
     }
 
-    &:hover, &:focus {
-        color: var(--accent-color);
-    }
-
-    @media screen and (min-width: $tablet) {
-        &+& {
-            margin-left: 50px;
-        }
-
-        margin-bottom: 0;
-    }
+    margin-bottom: 0;
+  }
 }
 
 .site-nav__link {
-    @extend %link;
+  @extend %link;
 
-    display: block;
+  display: block;
 
-    color: var(--title-text-color);
-    font-weight: 500;
-    letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  font-weight: 500;
+  letter-spacing: 0.02em;
 
-    &--current {
-        color: var(--accent-color);  
-    }
+  &--current {
+    color: var(--accent-color);
+  }
 
-    @media screen and (max-width: 767.9px) {
-        font-size: 40px;
-        line-height: 1.17;
-    }
+  @media screen and (max-width: 767.9px) {
+    font-size: 40px;
+    line-height: 1.17;
+  }
 
-    @media screen and (min-width: $tablet) {
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
+  @media screen and (min-width: $tablet) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
-    @media screen and (min-width: $desctop) {
-        line-height: 1.14;
-        
-    }
+  @media screen and (min-width: $desctop) {
+    line-height: 1.14;
+  }
 }
 
 .site-nav__link--current::after {
-    content: '';
+  content: '';
 
-    position: absolute;
-    width: 100%;
-    bottom: -1px;
+  position: absolute;
+  width: 100%;
+  bottom: -1px;
 
-    display: flex;
+  display: flex;
 
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 
-    display: none;
+  display: none;
 
-    @media screen and (min-width: $tablet) {
-        display: block;
-    }
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
 }

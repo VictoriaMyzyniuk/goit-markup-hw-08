@@ -326,7 +326,7 @@ img {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199.9px) {
   .contacts__item:first-child {
     margin-bottom: 10px;
   }
